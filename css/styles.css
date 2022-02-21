@@ -16,6 +16,11 @@
     --accent-bg-cl: #2196f3;
   }
 
+  ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+  }
 
   body {
     font-family: var(--main-font);
@@ -37,6 +42,13 @@
     margin-top: 0;
     margin-bottom: 0;
     }
+    
+    img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+    }
+    
   
   .list{
     color: var(--accent-txt-cl);
@@ -50,13 +62,20 @@
 
     header {
       background-color: var(--light-txt-cl);
+      border-bottom:1px solid  #ECECEC ; 
+    }
+
+    .header-container {
+        display: flex;
+        align-items: center;
+      
     }
     
     
  .container-nav { 
     display: flex;
     align-items: center;
-    border:  1px  solid  #ECECEC ; }
+     }
     
 .logo {
     text-decoration: none;
@@ -146,6 +165,7 @@ color: var(--accent-bg-cl);
 
 .title-field {
     padding-top: 200px;
+    padding-bottom: 200px;
     text-align: center;
     background-color: var(--primary-dark-bg);
     
@@ -162,35 +182,34 @@ color: var(--accent-bg-cl);
     color: var(--light-txt-cl);
     background-color: var(--accent-bg-cl);
     border-radius: 4px;
-    margin-bottom: 210px;
+
 }
 
 /*Преимущества*/
-.advantages-field{
-    background-color:var(--light-txt-cl);
-    display: flex;
+.section {
+    padding: 94px 0;
+}
    
+.advantage-list .adv-item:not(:last-child){
+    margin-right: 30px;
 }
 
 .advantage-list {
     display: flex;
-    list-style-type: none;
-}
-
-.advantage-list .adv-item:not(:last-child) {
-    margin-right: 30px;
-
+    list-style-type: none; 
+   
 }
 
 .adv-item {
- width: 270px;
- align-items: center;
- padding-bottom: 94px;
+    width: 270px;
+    align-items: center;
+   
 }
 
+
+
 .features-title{
-    padding-top: 94px;
-    padding-bottom: 10px;
+    margin-bottom: 10px;
     font-weight: 700;
     line-height: 1.14;
     letter-spacing: 0.03em;
@@ -201,9 +220,13 @@ color: var(--accent-bg-cl);
     line-height: 1.71;
     letter-spacing: 0.03em;
     color: var(--txt-cl);
+
 }
 
 /*Деятельность*/
+.work-section {
+    padding-top: 0;
+}
 .our-activities{
     margin-bottom: 50px;
     font-weight: 700;
@@ -221,8 +244,9 @@ color: var(--accent-bg-cl);
 
 .activities-item + .activities-item {
     margin-left: 30px;
-    padding-bottom: 94px;
+    
 }
+
 
 /*Наша команда*/
 .team-field {
@@ -230,7 +254,6 @@ color: var(--accent-bg-cl);
 }
 
 .team-title{
-    padding-top: 94px;
     margin-bottom: 50px;
     font-weight: 700;
     line-height: 1.16;
@@ -249,14 +272,12 @@ color: var(--accent-bg-cl);
     margin-right: 30px;
 }
 
-
-.member-descr {
-    padding-bottom: 94px;
+.workers {
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 
-
 .team-member{
-    margin-top: 30px;
     margin-bottom: 10px;
     font-weight: 500;
     font-size: 16px;
@@ -303,8 +324,16 @@ color: var(--accent-bg-cl);
 }
 
 .details {
-    padding-bottom: 9px;
+    
     list-style-type: none;
+}
+.details:not(:last-child) {
+    margin-bottom: 9px;
+}
+
+.address {
+    padding-top: 20px;
+    font-style: normal;
 }
 
 
@@ -334,22 +363,17 @@ color: var(--accent-bg-cl);
    display: flex; 
    list-style-type: none;
    justify-content: center;
+   margin-bottom: 50px;
 }
 
-.button-item {
-    padding-top: 94px;
-    padding-bottom: 50px;
-}
+
 
 .button-list .button-item:not(:last-child) {
     margin-right: 8px;
 }
 
 .work-title{
-padding-top: 20px;
-padding-bottom: 4px;
-padding-left: 24px;
-padding-right: 24px;
+
 font-size: 18px;
 font-weight: 700;
 line-height: 2;
@@ -358,9 +382,6 @@ color: var(--title-cl);
 }
 
 .description{
-padding-bottom: 20px;
-padding-left: 24px;
-padding-right: 24px; 
 font-size: 16px;
 line-height: 1.85;
 letter-spacing: 0.03em;
@@ -378,22 +399,38 @@ color: var(--txt-cl);
     margin-right: 0;
 } 
 
+.cards-content:nth-last-child(-n+3){
+    margin-bottom: 0;
+}
+
 
  .cards-content { 
     margin-right: 30px;
     margin-bottom: 30px;
     width: 370px;
-    border:  1px  solid  #ECECEC ;
-
+   
 }
-
-
+.work-descr {
+    padding: 20px 24px;
+}
 
 
 .container {
-  width: 1230px;
-  padding-left: 0px;
-  padding-right: 0px;
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
   margin-right: auto;
   margin-left: auto;
 }
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
